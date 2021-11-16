@@ -6,8 +6,12 @@ function initialize() {
 
 // Fetch API data
 const catImagesUrls = [];
+// <<<<<<< HEAD
 const menu = document.getElementById("cat-menu")
 
+// =======
+// const menu = document.getElementById("cat-menu")
+// >>>>>>> 4319a1a (score)
 fetch("https://cataas.com/api/cats?tags=cute")
     .then ((response) => response.json())
     .then ((catImages) => catImages.map((catImage) => catImage.id))
@@ -47,16 +51,15 @@ function playerNameInput(userName) {
 
 // “Start game” button click event 
 // "Start game" button disappears once clicked and game starts
-{/* <button id="start-game" type="text">START GAME</button> */}
+// {/* <button id="start-game" type="text">START GAME</button> */}
 const startGame = document.getElementById("start-game")
-
+const score = document.querySelector("#score-count")
 startGame.addEventListener("click", gameStarted)
 
 // Cat image click event that increases the player’s score by 1 per click
 // Update number of clicks in the "#score-count" element
 // Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
 // Resize cat images to fit on the game board
-
 function gameStarted() {
 // console.log(gameStarted)const newImage = document.createElement('img')
         // const newImage = document.createElement('img')
@@ -64,12 +67,20 @@ function gameStarted() {
         
         const img = document.querySelector("img"); 
         img.src = catImagesUrls[0]
+        startGame.style.display = "none";
+        // playerNameForm.style.display = "none";
 
-        img.document.querySelector('img').addEventListener("click", clicked)
+
+        img.addEventListener("click", clicked)
         function clicked() {
-          likes.innerHTML = parseInt(likes.innerHTML) +1 + " likes"
-        
-}}
+            console.log(clicked)
+            const scoreCount = parseInt(score.textContent.split(" ")[1])
+          score.textContent = `Score: ${scoreCount + 1 }`
+}
+setTimeout(function(){img.style.display = "none"}, 3000)
+
+}
+
 
 // function clickCat(){
 //   }
@@ -77,7 +88,6 @@ function gameStarted() {
 
 // const likeBtn = document.getElementById("like-button")
 // // // //add by one
-const likes = document.getElementById("like-count")
 // // if(likeBtn){
 // // likeBtn.addEventListener('click', swapper, false);
 // // }
