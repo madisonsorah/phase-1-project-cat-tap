@@ -35,12 +35,12 @@ playerNameForm.addEventListener('submit', (e) => {
 function playerNameInput(userName) {
     playerName.innerHTML = "";
     playerName.textContent = `${userName}`;
-    const nameContainer = document.querySelector("#username-container")
+    const nameContainer = document.querySelector("#username-container");
     nameContainer.innerHTML = "";
     nameContainer.textContent = `${userName}`;
+    playerNameForm.style.display = "none";
 }
 // “Player Name” form that submits a username of the player’s choice to the bottom of the page
-
 
 
 
