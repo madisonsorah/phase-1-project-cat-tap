@@ -59,3 +59,4 @@ let id = setInterval(function() {
     // Cat image click event that increases the player’s score by 1 per click
     // Game board click event that erases a player’s score if clicked
     
+//hello world
