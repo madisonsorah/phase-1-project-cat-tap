@@ -40,7 +40,7 @@
     let seconds = 2;
 let id = setInterval(function() {
   timer.innerHTML = parseInt(seconds--) + " seconds"
-  if(likes.innerHTML == 100 + " likes") {
+  if(likes.innerHTML == 5 + " likes") {
     clearInterval(id)
     winner.textContent = "Winner"
     console.log(winner)
