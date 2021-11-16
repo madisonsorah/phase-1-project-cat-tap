@@ -20,9 +20,25 @@
 // DOMContentLoaded that loads the API data once the page loads
 document.addEventListener('DOMContentLoaded', initialize);
 function initialize() {
-    
+
 }
 // “Player Name” form that enables player to submit a username
+const playerNameForm = document.querySelector("#username-input")
+const playerName = document.querySelector("#username")
+
+playerNameForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    playerNameInput(playerName.value);
+    playerNameForm.reset();
+    })
+
+function playerNameInput(userName) {
+    playerName.innerHTML = "";
+    playerName.textContent = `${userName}`;
+    const nameContainer = document.querySelector("#username-container")
+    nameContainer.innerHTML = "";
+    nameContainer.textContent = `${userName}`;
+}
 // “Player Name” form that submits a username of the player’s choice to the bottom of the page
 
 
@@ -57,12 +73,12 @@ function move() {
     }
     }, 1000)};
     
-    // Event listeners: 
-    // DOMContentLoaded that loads the API data once the page loads
-    // “Player Name” form that enables player to submit a username
-    // “Player Name” form that submits a username of the player’s choice to the bottom of the page
-    // “Start game” button click event that triggers the timer
-    // Cat image click event that increases the player’s score by 1 per click
-    // Game board click event that erases a player’s score if clicked
+//     Event listeners: 
+//     DOMContentLoaded that loads the API data once the page loads
+//     “Player Name” form that enables player to submit a username
+//     “Player Name” form that submits a username of the player’s choice to the bottom of the page
+//     “Start game” button click event that triggers the timer
+//     Cat image click event that increases the player’s score by 1 per click
+//     Game board click event that erases a player’s score if clicked
     
-//hello world
+// hello world
