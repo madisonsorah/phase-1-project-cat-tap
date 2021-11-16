@@ -9,3 +9,7 @@ fetch("https://cataas.com/api/cats?tags=cute")
         })
         console.log(catImagesUrls);
     })
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("#timer").innerHTML = minutes + "m " + seconds + "s ";
