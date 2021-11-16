@@ -108,6 +108,7 @@ const likes = document.getElementById("like-count")
 // Once game stops, player score is displayed in middle of screen + retry button is shown underneath
 // Once retry button is clicked, the game resets with the user's original Player Name
 
+
 const gameBoard = document.querySelector("#game-board");
 const resetButton = document.querySelector("#retry")
 
@@ -115,9 +116,7 @@ gameBoard.addEventListener('click', gameBoardClick)
 
 function gameBoardClick() {
     // Clear images
-
     // Display player score at center of screen
-
     // Display retry button
     gameBoard.style.display = "block"
     gameBoard.addEventListener('click', gameRestarted)
