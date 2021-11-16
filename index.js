@@ -26,7 +26,7 @@ fetch("https://cataas.com/api/cats?tags=cute")
         
         // const img = document.querySelector("img"); 
         // img.src = catImagesUrls[0]
-    })
+})
 
 
 // “Player Name” form that enables player to submit a username
@@ -37,7 +37,7 @@ playerNameForm.addEventListener('submit', (e) => {
     e.preventDefault();
     playerNameInput(playerName.value);
     playerNameForm.reset();
-    })
+})
 
 // “Player Name” form that submits a username of the player’s choice to the bottom of the page
 function playerNameInput(userName) {
@@ -122,7 +122,7 @@ setTimeout(function(){img.style.display = "none"}, 3000)
 const gameBoard = document.querySelector("#game-board");
 const resetButton = document.querySelector("#retry")
 
-gameBoard.addEventListener('click', gameBoardClick)
+gameBoard.parentElement.addEventListener('click', gameBoardClick)
 
 function gameBoardClick() {
     // Clear images
@@ -137,11 +137,11 @@ function gameRestarted() {
             // const newImage = document.createElement('img')
             // newImage.src = catImagesUrls[1]
             
-            const img = document.querySelector("img"); 
-            img.src = catImagesUrls[0]
+    const img = document.querySelector("img"); 
+    img.src = catImagesUrls[0]
     
-            img.document.querySelector('img').addEventListener("click", clicked)
-            function clicked() {
-              likes.innerHTML = parseInt(likes.innerHTML) +1 + " likes"
+    img.document.querySelector('img').addEventListener("click", clicked)
+    function clicked() {
+        likes.innerHTML = parseInt(likes.innerHTML) +1 + " likes"
             
     }}
