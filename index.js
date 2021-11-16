@@ -43,10 +43,15 @@ function playerNameInput(userName) {
     playerNameForm.style.display = "none";
 }
 
+// “Start game” button click event 
+// "Start game" button disappears once clicked and game starts
 {/* <button id="start-game" type="text">START GAME</button> */}
 const startGame = document.getElementById("start-game")
 
 startGame.addEventListener("click", gameStarted)
+
+// Cat image click event that increases the player’s score by 1 per click
+// Update number of clicks in the "#score-count" element
 
 function gameStarted() {
 // console.log(gameStarted)const newImage = document.createElement('img')
@@ -65,13 +70,6 @@ function gameStarted() {
 // function clickCat(){
 //   }
 // }
-
-
-
-
-
-
-
 
 // const likeBtn = document.getElementById("like-button")
 // // // //add by one
@@ -102,8 +100,9 @@ const likes = document.getElementById("like-count")
 //     }
 //     }, 1000)};
     
-//     “Start game” button click event 
-//     Cat image click event that increases the player’s score by 1 per click
-//     Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
-//     Game board click event that erases a player’s score if clicked
+// Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
+// Resize cat images to fit on the game board
+// Create a game board click event that stops the game if the space outside of cat images is clicked
+// Once game stops, player score is displayed in middle of screen + retry button is shown underneath
+// Once retry button is clicked, the game resets with the user's original Player Name
     
