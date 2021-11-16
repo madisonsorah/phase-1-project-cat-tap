@@ -54,6 +54,8 @@ startGame.addEventListener("click", gameStarted)
 
 // Cat image click event that increases the player’s score by 1 per click
 // Update number of clicks in the "#score-count" element
+// Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
+// Resize cat images to fit on the game board
 
 function gameStarted() {
 // console.log(gameStarted)const newImage = document.createElement('img')
@@ -101,10 +103,36 @@ const likes = document.getElementById("like-count")
 //         console.log(winner)
 //     }
 //     }, 1000)};
-    
-// Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
-// Resize cat images to fit on the game board
+
 // Create a game board click event that stops the game if the space outside of cat images is clicked
 // Once game stops, player score is displayed in middle of screen + retry button is shown underneath
 // Once retry button is clicked, the game resets with the user's original Player Name
+
+const gameBoard = document.querySelector("#game-board");
+const resetButton = document.querySelector("#retry")
+
+gameBoard.addEventListener('click', gameBoardClick)
+
+function gameBoardClick() {
+    // Clear images
+
+    // Display player score at center of screen
+
+    // Display retry button
+    gameBoard.style.display = "block"
+    gameBoard.addEventListener('click', gameRestarted)
+}
+
+function gameRestarted() {
+    // console.log(gameStarted)const newImage = document.createElement('img')
+            // const newImage = document.createElement('img')
+            // newImage.src = catImagesUrls[1]
+            
+            const img = document.querySelector("img"); 
+            img.src = catImagesUrls[0]
     
+            img.document.querySelector('img').addEventListener("click", clicked)
+            function clicked() {
+              likes.innerHTML = parseInt(likes.innerHTML) +1 + " likes"
+            
+    }}
