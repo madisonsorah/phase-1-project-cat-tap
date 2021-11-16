@@ -32,6 +32,7 @@ playerNameForm.addEventListener('submit', (e) => {
     playerNameForm.reset();
     })
 
+// “Player Name” form that submits a username of the player’s choice to the bottom of the page
 function playerNameInput(userName) {
     playerName.innerHTML = "";
     playerName.textContent = `${userName}`;
@@ -40,8 +41,6 @@ function playerNameInput(userName) {
     nameContainer.textContent = `${userName}`;
     playerNameForm.style.display = "none";
 }
-// “Player Name” form that submits a username of the player’s choice to the bottom of the page
-
 
 
 const likeBtn = document.getElementById("like-button")
@@ -73,10 +72,6 @@ function move() {
     }
     }, 1000)};
     
-//     Event listeners: 
-//     DOMContentLoaded that loads the API data once the page loads
-//     “Player Name” form that enables player to submit a username
-//     “Player Name” form that submits a username of the player’s choice to the bottom of the page
 //     “Start game” button click event that triggers the timer
 //     Cat image click event that increases the player’s score by 1 per click
 //     Game board click event that erases a player’s score if clicked

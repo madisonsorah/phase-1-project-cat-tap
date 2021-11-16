@@ -38,15 +38,20 @@ button {
 
 #username-input {
     padding: 20px;
+    font-size: 0.9rem;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
 }
 
 #submit-button {
+    font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
     background-color: #fff;
     color: black;
+}
+
+#submit-button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #start-game {
@@ -55,8 +60,13 @@ button {
     font-weight: 600;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 12px;
     background-color: #000;
     color: #fff;
+}
+
+#start-game:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #user-info {
