@@ -72,8 +72,9 @@ function move() {
     }
     }, 1000)};
     
-//     “Start game” button click event that triggers the timer
+//     “Start game” button click event 
 //     Cat image click event that increases the player’s score by 1 per click
+//     Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
 //     Game board click event that erases a player’s score if clicked
     
 // hello world
