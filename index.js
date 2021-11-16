@@ -1,5 +1,13 @@
+// DOMContentLoaded that loads the API data once the page loads
+document.addEventListener('DOMContentLoaded', initialize);
+function initialize() {
+
+}
+
+// Fetch API data
 const catImagesUrls = [];
 const menu = document.getElementById("cat-menu")
+
 fetch("https://cataas.com/api/cats?tags=cute")
     .then ((response) => response.json())
     .then ((catImages) => catImages.map((catImage) => catImage.id))
@@ -14,15 +22,9 @@ fetch("https://cataas.com/api/cats?tags=cute")
         
         // const img = document.querySelector("img"); 
         // img.src = catImagesUrls[0]
-
     })
 
 
-// DOMContentLoaded that loads the API data once the page loads
-document.addEventListener('DOMContentLoaded', initialize);
-function initialize() {
-
-}
 // “Player Name” form that enables player to submit a username
 const playerNameForm = document.querySelector("#username-input")
 const playerName = document.querySelector("#username")
