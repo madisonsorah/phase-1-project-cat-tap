@@ -6,6 +6,7 @@ function initialize() {
 
 // Fetch API data
 const catImagesUrls = [];
+const catImagesUrls2 = [];
 // <<<<<<< HEAD
 const menu = document.getElementById("cat-menu")
 
@@ -18,8 +19,11 @@ fetch("https://cataas.com/api/cats?tags=cute")
     .then((catIds) => {
         catIds.forEach((catId) => {
             catImagesUrls.push(`https://cataas.com/cat/${catId}`)
+            catImagesUrls2.push(`https://cataas.com/cat/${catId}`)
         })
         catImagesUrls.splice(1,80)
+        catImagesUrls2.splice(1,80)
+
         // console.log(catImagesUrls);
         // const newImage = document.createElement('img')
         // newImage.src = catImagesUrls[1]
@@ -70,8 +74,21 @@ function gameStarted() {
         startGame.style.display = "none";
         // playerNameForm.style.display = "none";
         const randomNumber = Math.floor(Math.random() * catImagesUrls.length);
-                img.src = catImagesUrls[randomNumber]
+        img.src = catImagesUrls[randomNumber];
+        
+        const img2 = document.querySelector("#img2")
+        img2.src = catImagesUrls2[randomNumber]
+        // const loopCat = catImagesUrls.forEach(el => {
+        //    el = catImagesUrls[randomNumber]
+        // })
 
+    //second image
+        // img2.addEventListener("click", clicked)
+        // function clicked() {
+        //     console.log(clicked)
+        //     const scoreCount = parseInt(score.textContent.split(" ")[1])
+        //   score.textContent = `Score: ${scoreCount + 1 }`
+        
 
         img.addEventListener("click", clicked)
         function clicked() {
@@ -81,6 +98,11 @@ function gameStarted() {
 }
 setTimeout(function(){img.style.display = "none"}, randomTimer(5000, 7000))
 }
+// const loopCat = catImagesUrls.forEach(el => {
+//     el = catImagesUrls[randomNumber]
+//  })
+// loop thru 3 times
+
 // floor - round down to the nearest number.
 // random - decimal.
 const randomTimer = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min}
