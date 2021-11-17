@@ -68,16 +68,140 @@ function gameStarted() {
 // console.log(gameStarted)const newImage = document.createElement('img')
         // const newImage = document.createElement('img')
         // newImage.src = catImagesUrls[1]
-        
-        const img = document.querySelector("img"); 
-        // img.src = catImagesUrls[0]
         startGame.style.display = "none";
-        // playerNameForm.style.display = "none";
-        const randomNumber = Math.floor(Math.random() * catImagesUrls.length);
+        const randomNumber = Math.floor(Math.random() * catImagesUrls.length)
+        const firstImg = document.createElement('img')
+        const firstCatImageContainer = document.querySelector('#cat-menu')
+        firstImg.src = catImagesUrls[randomNumber];
+        const left = Math.floor((Math.random() * 200) + 1)+"px";
+        const top = Math.floor((Math.random() * 200) + 1)+"px";
+        firstImg.style.position = "absolute";
+        firstImg.style.top = top;
+        firstImg.style.left = left;
+        firstCatImageContainer.appendChild(firstImg)
+        setTimeout(function() {firstImg.style.display = 'none'}, 1000);
+        setTimeout(function(){firstImg.style.display = "none"}, randomTimer(5000, 7000))
+
+        firstImg.addEventListener('click', clicked)
+        function clicked() {
+        console.log(clicked)
+        const scoreCount = parseInt(score.textContent.split(' ')[1])
+        score.textContent = `Score: ${scoreCount + 1 }`
+        // finalScore.textContent = `Final Score: ${scoreCount + 1 }`
+        };
+    
+        const interval = setInterval(function() {
+            startGame.style.display = "none";
+            const randomNumber = Math.floor(Math.random() * catImagesUrls.length)
+            const img = document.createElement('img')
+            const catImageContainer = document.querySelector('#cat-menu')
+            img.src = catImagesUrls[randomNumber];
+            const left = Math.floor((Math.random() * 200) + 1)+"px";
+            const top = Math.floor((Math.random() * 200) + 1)+"px";
+            img.style.position = "absolute";
+            img.style.top = top;
+            img.style.left = left;
+            catImageContainer.appendChild(img)
+            setTimeout(function() {img.style.display = 'none'}, 1000);
+
+            img.addEventListener('click', clicked)
+            function clicked() {
+            console.log(clicked)
+            const scoreCount = parseInt(score.textContent.split(' ')[1])
+            score.textContent = `Score: ${scoreCount + 1 }`
+        // finalScore.textContent = `Final Score: ${scoreCount + 1 }`
+        };
+        }, 3000);
+
+        function outsideClick() {
+            // Clear images
+            clearInterval(interval);
+            // Display player score at center of screen
+            finalScore.style.display= 'block'
+            // Display retry button
+            resetButton.style.display= 'block'
+            // Restart game
+            resetButton.addEventListener('click', gameRestarted)
+        }        
+
+    }
+
+
+function gameRestarted() {
+    resetButton.style.display = "none";
+    const randomNumber = Math.floor(Math.random() * catImagesUrls.length)
+    const firstImg = document.createElement('img')
+    const firstCatImageContainer = document.querySelector('#cat-menu')
+    firstImg.src = catImagesUrls[randomNumber];
+    const left = Math.floor((Math.random() * 200) + 1)+"px";
+    const top = Math.floor((Math.random() * 200) + 1)+"px";
+    firstImg.style.position = "absolute";
+    firstImg.style.top = top;
+    firstImg.style.left = left;
+    firstCatImageContainer.appendChild(firstImg)
+    setTimeout(function() {firstImg.style.display = 'none'}, 1000);
+    setTimeout(function(){firstImg.style.display = "none"}, randomTimer(5000, 7000))
+
+    firstImg.addEventListener('click', clicked)
+    function clicked() {
+    console.log(clicked)
+    const scoreCount = parseInt(score.textContent.split(' ')[1])
+    score.textContent = `Score: ${scoreCount + 1 }`
+    // finalScore.textContent = `Final Score: ${scoreCount + 1 }`
+    };
+
+    const interval = setInterval(function() {
+        startGame.style.display = "none";
+        const randomNumber = Math.floor(Math.random() * catImagesUrls.length)
+        const img = document.createElement('img')
+        const catImageContainer = document.querySelector('#cat-menu')
         img.src = catImagesUrls[randomNumber];
-        
-        const img2 = document.querySelector("#img2")
-        img2.src = catImagesUrls2[randomNumber]
+        const left = Math.floor((Math.random() * 200) + 1)+"px";
+        const top = Math.floor((Math.random() * 200) + 1)+"px";
+        img.style.position = "absolute";
+        img.style.top = top;
+        img.style.left = left;
+        catImageContainer.appendChild(img)
+        setTimeout(function() {img.style.display = 'none'}, 1000);
+
+        img.addEventListener('click', clicked)
+        function clicked() {
+        console.log(clicked)
+        const scoreCount = parseInt(score.textContent.split(' ')[1])
+        score.textContent = `Score: ${scoreCount + 1 }`
+    // finalScore.textContent = `Final Score: ${scoreCount + 1 }`
+    };
+    }, 3000);
+    
+    // backgrounds.forEach(background => {
+    //     background.addEventListener('click', outsideClick)
+    // })
+
+    function outsideClick() {
+        clearInterval(interval);
+        resetButton.classList.remove('behind');
+        // Clear images
+        // Display player score at center of screen
+        finalScore.style.display= 'block'
+        // Display retry button
+        resetButton.style.display= 'block'
+        // Restart game
+        resetButton.addEventListener('click', gameRestarted)
+    }
+
+
+
+
+
+    // clearInterval()
+
+    
+
+        // img.src = catImagesUrls[0]
+        // playerNameForm.style.display = "none";
+        // const randomNumber = Math.floor(Math.random() * catImagesUrls.length);
+        // img.src = catImagesUrls[randomNumber];
+
         // const loopCat = catImagesUrls.forEach(el => {
         //    el = catImagesUrls[randomNumber]
         // })
@@ -88,16 +212,8 @@ function gameStarted() {
         //     console.log(clicked)
         //     const scoreCount = parseInt(score.textContent.split(" ")[1])
         //   score.textContent = `Score: ${scoreCount + 1 }`
-        
+    
 
-        img.addEventListener("click", clicked)
-        function clicked() {
-            console.log(clicked)
-            const scoreCount = parseInt(score.textContent.split(" ")[1])
-          score.textContent = `Score: ${scoreCount + 1 }`
-}
-setTimeout(function(){img.style.display = "none"}, randomTimer(5000, 7000))
-}
 // const loopCat = catImagesUrls.forEach(el => {
 //     el = catImagesUrls[randomNumber]
 //  })
@@ -144,29 +260,55 @@ const randomTimer = (min, max) => { return Math.floor(Math.random() * (max - min
 // Once retry button is clicked, the game resets with the user's original Player Name
 
 
-const gameBoard = document.querySelector("#game-board");
-const resetButton = document.querySelector("#retry")
-
-gameBoard.parentElement.addEventListener('click', gameBoardClick)
-
-function gameBoardClick() {
+function outsideClick() {
     // Clear images
     // Display player score at center of screen
+    finalScore.style.display= 'block'
     // Display retry button
-    gameBoard.style.display = "block"
-    gameBoard.addEventListener('click', gameRestarted)
+    resetButton.style.display= 'block'
+    // Restart game
+    resetButton.addEventListener('click', gameRestarted)
 }
 
 function gameRestarted() {
-    // console.log(gameStarted)const newImage = document.createElement('img')
-            // const newImage = document.createElement('img')
-            // newImage.src = catImagesUrls[1]
-            
-    const img = document.querySelector("img"); 
-    img.src = catImagesUrls[0]
+    startGame.style.display = "none";
+        const randomNumber = Math.floor(Math.random() * catImagesUrls.length)
+        const img = document.createElement('img')
+        const catImageContainer = document.querySelector('#cat-menu')
+        img.src = catImagesUrls[randomNumber];
+        catImageContainer.appendChild(img)
+        setTimeout(function() {firstCatImg.style.display = 'none'}, 1000);
+
+        img.addEventListener('click', clicked)
+        function clicked() {console.log(clicked)
+        const scoreCount = parseInt(score.textContent.split(' ')[1])
+        score.textContent = `Score: ${scoreCount + 1 }`
+        finalScore.textContent = `Final Score: ${scoreCount + 1 }`
+        };
+        
+        setTimeout(function() {img.style.display = 'none'}, 
+        randomTimeout);
+        
+        const backgrounds = document.querySelectorAll('.behind')
     
-    img.document.querySelector('img').addEventListener("click", clicked)
-    function clicked() {
-        likes.innerHTML = parseInt(likes.innerHTML) +1 + " likes"
-            
-    }}
+        backgrounds.forEach(background => {
+        background.addEventListener('click', outsideClick)
+    })}, 4000);
+    
+    // backgrounds.forEach(background => {
+    //     background.addEventListener('click', outsideClick)
+    // })
+
+    function outsideClick() {
+        clearInterval(interval);
+        resetButton.classList.remove('behind');
+        // Clear images
+        // Display player score at center of screen
+        finalScore.style.display= 'block'
+        // Display retry button
+        resetButton.style.display= 'block'
+        // Restart game
+        resetButton.addEventListener('click', gameRestarted)
+    }
+
+    

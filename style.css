@@ -6,10 +6,6 @@ body {
     font-size: 1rem;
     background-color: #fff;
   }
-  img {
-    height: 100px;
-    width: 100px;
-  }
   
   /* #header-img {
     height: 175px;
@@ -17,7 +13,7 @@ body {
   } */
 
 #cat-tap-title {
-    padding: 20px;
+    padding: 30px;
     margin: 0 auto;
     text-align: center;
     background-color: #000;
@@ -31,6 +27,18 @@ body {
     border: 0.2rem outset black;
 }
 
+#cat-menu {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+  }
+
+  img {
+    height: 200px;
+    padding: 20px;
+  }
+
+
 /* #time {
     padding: 20px;
     font-weight: 600;
@@ -39,6 +47,13 @@ body {
 
 #buttons {
     padding: 220px;
+}
+
+#final-score {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 button {
@@ -81,6 +96,7 @@ button {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 12px;
     background-color: #000;
@@ -96,6 +112,7 @@ button {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 12px;
     background-color: #000;
@@ -108,21 +125,18 @@ button {
 
 #user-info {
     margin: 0 auto;
-    padding: 30px;
+    padding: 50px;
     font-size: 0.9rem;
     font-weight: 600;
     background-color: #000;
 }
 
 #username-container {
-    margin: 130px;
-    text-align: center;
+    float: left;
     color: #fff;
 }
 
 #score-count {
-    margin: 130px;
-    text-align: center;
+    float: right;
     color: #fff;
   }
-
