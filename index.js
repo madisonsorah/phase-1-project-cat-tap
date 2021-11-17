@@ -66,9 +66,11 @@ function gameStarted() {
         // newImage.src = catImagesUrls[1]
         
         const img = document.querySelector("img"); 
-        img.src = catImagesUrls[0]
+        // img.src = catImagesUrls[0]
         startGame.style.display = "none";
         // playerNameForm.style.display = "none";
+        const randomNumber = Math.floor(Math.random() * catImagesUrls.length);
+                img.src = catImagesUrls[randomNumber]
 
 
         img.addEventListener("click", clicked)
@@ -77,10 +79,11 @@ function gameStarted() {
             const scoreCount = parseInt(score.textContent.split(" ")[1])
           score.textContent = `Score: ${scoreCount + 1 }`
 }
-setTimeout(function(){img.style.display = "none"}, 3000)
-
+setTimeout(function(){img.style.display = "none"}, randomTimer(5000, 7000))
 }
-
+// floor - round down to the nearest number.
+// random - decimal.
+const randomTimer = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min}
 
 // function clickCat(){
 //   }
