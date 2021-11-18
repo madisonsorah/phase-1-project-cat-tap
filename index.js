@@ -75,7 +75,7 @@ function gameStarted(e) {
     finalScore.style.display = 'none';
     named.style.display = ""
     const firstRandomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
-    const firstCatImg = document.createElement('img')
+    const firstCatImg = document.createElement('img');
     const firstCatContainer = document.querySelector('#cat-menu');
     firstCatImg.src = catImagesUrls[firstRandomImageNumber]
     firstCatImg.style.position = 'absolute';
