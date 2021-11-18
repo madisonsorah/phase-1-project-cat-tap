@@ -114,8 +114,10 @@ function gameStarted(e) {
 
     function outsideClick() {
         clearInterval(interval);
-
         // Clear images
+
+        // Display userName
+
         // Display player score at center of screen
         finalScore.style.display= 'block'
         // Display retry button
@@ -134,5 +136,8 @@ function gameRestarted(e) {
     e.stopPropagation()
     resetButton.style.display = 'none';
     finalScore.style.display = 'none';
-    gameStarted(e);
+    gameStarted(e)
+    window.location.reload();
+    return false
+    // score.textContent = `Score: ${scoreCount = 0}`
 }
