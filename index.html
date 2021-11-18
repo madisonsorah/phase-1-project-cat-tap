@@ -6,7 +6,16 @@
   </head>
   <body>
       <div id="game-title">
-        <h1 id= "cat-tap-title">🐾 CAT TAP 🐾</h1>
+
+        <div class="text">
+        <p id= "cat-tap-title" class="title">🐾 CAT TAP 🐾</p>
+      </div>
+        <script>
+          const text = document.querySelector(".text p")
+          text.innerHTML = text.innerText.split("").map((char, i) =>
+          `<span style= "transform:rotate(${i * 30}deg)">${char}</span>`
+          ).join("")
+        </script>
       </div>
       <div id= "main-game-board">
         <div id="cat-menu"></div>
