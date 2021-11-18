@@ -1,23 +1,18 @@
 body {
-    width: 800px;
     margin: 0 auto;
     position: relative;
+    width: 800px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     background-color: #fff;
   }
-  
-  /* #header-img {
-    height: 175px;
-    width: 550px;
-  } */
 
 #cat-tap-title {
     padding: 30px;
     margin: 0 auto;
     text-align: center;
-    background-color: #000;
     color: #fff;
+    background-color: #000;
 }
 
 #main-game-board {
@@ -33,32 +28,10 @@ body {
     position: absolute;
   }
 
-  img {
+img {
     height: 200px;
     padding: 20px;
   }
-
-
-/* #time {
-    padding: 20px;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-} */
-
-#buttons {
-    padding: 220px;
-}
-
-#final-score {
-    padding: 20px;
-    font-size: 1rem;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-button {
-    border: 0.03rem outset black;
-}
 
 #username-input {
     padding: 20px;
@@ -69,16 +42,24 @@ button {
 #username {
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #fff;
     color: #000;
+    background-color: #fff;
     border: 0.03rem outset black;
+
 }
 
 ::placeholder {
-    color:#000;
     opacity: 0.3;
+    color:#000;
 }
 
+#buttons {
+    padding: 220px;
+}
+
+button {
+    border: 0.03rem outset black;
+}
 
 #submit-button {
     font-weight: 600;
@@ -92,11 +73,11 @@ button {
 }
 
 #start-game {
+    margin: 0 auto;
     padding: 10px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
-    margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 12px;
     background-color: #000;
@@ -108,11 +89,11 @@ button {
 }
 
 #retry {
+    margin: 0 auto;
     padding: 10px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
-    margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 12px;
     background-color: #000;
@@ -121,6 +102,13 @@ button {
 
 #retry:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#final-score {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #user-info {
