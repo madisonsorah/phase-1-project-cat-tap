@@ -58,6 +58,7 @@ function playerNameInput(userName) {
 const startGame = document.getElementById('start-game')
 const score = document.querySelector('#score-count')
 const finalScore = document.querySelector('#final-score')
+const named = document.querySelector('#name')
 const resetButton = document.querySelector('#retry')
 // const randomTimer = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min}
 const randomTimeout = Math.floor((Math.random() + 1) * 2000)
@@ -72,6 +73,7 @@ function gameStarted(e) {
     startGame.style.display = 'none';
     resetButton.style.display = 'none';
     finalScore.style.display = 'none';
+    named.style.display = ""
     const firstRandomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
     const firstCatImg = document.createElement('img')
     const firstCatContainer = document.querySelector('#cat-menu');
@@ -117,7 +119,7 @@ function gameStarted(e) {
         // Clear images
 
         // Display userName
-
+        named.textContent = ""
         // Display player score at center of screen
         finalScore.style.display= 'block'
         // Display retry button
@@ -136,6 +138,7 @@ function gameRestarted(e) {
     e.stopPropagation()
     resetButton.style.display = 'none';
     finalScore.style.display = 'none';
+    named.style.display = " none"
     gameStarted(e)
     window.location.reload();
     return false
