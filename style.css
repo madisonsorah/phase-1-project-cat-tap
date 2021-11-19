@@ -190,3 +190,10 @@ img {
     float: right;
     color: #fff
   }
+
+#images
+{
+    display:table;
+    margin:0 auto;
+    color: white;
+}
