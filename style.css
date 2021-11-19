@@ -1,8 +1,14 @@
 body {
     margin: 0 auto;
     width: 800px;
-    background-color: rgb(247, 245, 211);
+    background-image: url('Cat\ Tap\ Wallpaper.jpg');
+    background-size: 100px;
+    background-position: center;
 }
+
+.cursor {
+    cursor: url('Cat\ Tap\ Cursor.png'), auto;
+  }
 
 #game-title {
     padding: 15px;
@@ -32,7 +38,6 @@ body {
     background-size: 800px;
     background-repeat: no-repeat;
     background-position: center;
-    background-origin: padding-box;
     border: 0.15rem solid rgb(184, 147, 105);
     box-shadow: 0 8px 16px 0 rgb(197, 149, 94);
 }
