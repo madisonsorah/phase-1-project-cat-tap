@@ -64,6 +64,7 @@ function gameStarted(e) {
     startGame.style.display = 'none';
     resetButton.style.display = 'none';
     score.textContent = 'Score: 0';
+    finalScore.textContent = 'Score: 0';
     finalScore.style.display = 'none';
     const firstRandomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
     const firstCatImg = document.createElement('img');
