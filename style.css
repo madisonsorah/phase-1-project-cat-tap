@@ -32,6 +32,7 @@ body {
 }
 
 #main-game-board {
+    margin: 0 auto;
     height: 600px;
     background-image: url("Cat\ Tap\ Gameboard.jpg");
     background-size: 800px;
@@ -235,6 +236,6 @@ img {
 #images
 {
     display:table;
-    margin:0 auto;
+    margin: 0 auto;
     color: white;
 }

@@ -39,8 +39,10 @@ function playerNameInput(userName) {
     playerName.textContent = `${userName}`;
     const nameContainer = document.querySelector('#username-container');
     nameContainer.innerHTML = '';
-    nameContainer.textContent = `${userName}`;
+    nameContainer.textContent = `player name: ${userName}`;
     playerNameForm.style.display = 'none';
+    gameInstructions.style.display = 'none';
+    okButton.style.display = 'none';
 }
 
 // "How to play" button click event
@@ -80,6 +82,8 @@ startGame.addEventListener('click', gameStarted)
 function gameStarted(e) {
     e.stopPropagation();
     gameInstructionsButton.style.display = 'none';
+    gameInstructions.style.display = 'none';
+    okButton.style.display = 'none';
     playerNameForm.style.display = 'none';
     startGame.style.display = 'none';
     resetButton.style.display = 'none';
@@ -148,8 +152,8 @@ function gameRestarted(e) {
 }
 
 //button for random image
-let randomImages = document.getElementById("images")
-randomImages.addEventListener('click', randomCats)
+// let randomImages = document.getElementById("images")
+// randomImages.addEventListener('click', randomCats)
 
 function randomCats(e) {
     const randomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
