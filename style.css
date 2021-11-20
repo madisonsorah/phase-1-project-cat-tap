@@ -69,9 +69,9 @@ img {
     padding: 7px;
     font-weight: 300;
     font-family: Chalkduster, fantasy;
-    color: rgb(182, 138, 156);
-    background-color: rgb(241, 204, 210);
-    border: 0.15rem solid rgb(182, 138, 156);
+    color: rgb(187, 147, 164);
+    background-color: rgb(247, 221, 225);
+    border: 0.15rem solid rgb(187, 147, 164);
     border-top-left-radius: 25px 15px;
     border-top-right-radius: 15px 25px;
     border-bottom-right-radius: 25px 15px;
@@ -80,7 +80,7 @@ img {
 
 ::placeholder {
     opacity: 0.3;
-    color:rgb(182, 138, 156);
+    color:rgb(187, 147, 164);
 }
 
 
@@ -102,13 +102,13 @@ img {
     padding: 7px;
     font-weight: 300;
     font-family: Chalkduster, fantasy;
-    background-color: rgb(241, 204, 210);
-    color: rgb(182, 138, 156);
-    border: 0.15rem solid rgb(182, 138, 156);
+    background-color: rgb(247, 221, 225);
+    color: rgb(187, 147, 164);
+    border: 0.15rem solid rgb(187, 147, 164);
 }
 
 #submit-button:hover {
-    box-shadow: 0 8px 16px 0 rgb(182, 138, 156);
+    box-shadow: 0 8px 16px 0 rgb(187, 147, 164);
 }
 
 #start-game {
@@ -165,7 +165,7 @@ img {
 
 #final-score {
     padding: 20px;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 300;
     text-shadow: 0 8px 16px 0 rgb(161, 121, 75);
     text-align: center;
