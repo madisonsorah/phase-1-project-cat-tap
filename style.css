@@ -168,6 +168,7 @@ button {
  }
 @keyframes rotateText
 {
+<<<<<<< Updated upstream
     0%
     {
         transform: rotate(360deg);
@@ -186,3 +187,22 @@ button {
     transform-origin: 0 100px;
 
  }
+=======
+    display:table;
+    margin:0 auto;
+    color: white;
+}
+
+/* -- random code */
+.img-wrap {
+    position: relative;
+    ...
+}
+.img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+    ...
+}
+>>>>>>> Stashed changes

@@ -146,3 +146,20 @@ function gameRestarted(e) {
     // score.textContent = `Score: ${scoreCount = 0}`
 }
 
+<<<<<<< Updated upstream
+=======
+//button for random image
+let randomImages = document.getElementById("images")
+randomImages.addEventListener('click', randomCats)
+
+function randomCats(e) {
+    e.stopPropagation();
+    const randomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
+    const img = document.createElement('img');
+    img.src = catImagesUrls[randomImageNumber]
+    randomImages.append(img)
+    // i.append(img)
+    console.log(randomCats)
+    setTimeout(function() {img.style.display = 'none'}, 3000);
+}
+>>>>>>> Stashed changes
