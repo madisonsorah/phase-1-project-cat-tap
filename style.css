@@ -1,14 +1,15 @@
-body {
-    margin: 0 auto;
-    width: 800px;
-    background-image: url('Cat\ Tap\ Wallpaper.jpg');
-    background-size: 100px;
-    background-position: center;
+html, .cursor {
+    cursor: url('Cat\ Tap\ Cursor.png'), auto;
 }
 
-.cursor {
-    cursor: url('Cat\ Tap\ Cursor.png'), auto;
-  }
+body {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 800px;
+    background-image: url('Cat\ Tap\ Wallpaper.jpg');
+    background-size: 125px;
+    background-position: center;
+}
 
 #game-title {
     padding: 15px;
