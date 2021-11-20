@@ -43,6 +43,25 @@ function playerNameInput(userName) {
     playerNameForm.style.display = 'none';
 }
 
+// "How to play" button click event
+// "How to play" button disappears once game starts
+// "How to play" instructions dissapear once game starts
+
+const gameInstructionsButton = document.querySelector("#dropup-info")
+const gameInstructions = document.querySelector("#dropup-content")
+
+gameInstructionsButton.addEventListener('click', function () {
+    gameInstructions.style.display = 'block';
+    okButton.style.display = 'block';
+})
+
+const okButton = document.querySelector("#ok-button")
+
+okButton.addEventListener('click', function() {
+    gameInstructions.style.display = 'none';
+    okButton.style.display = 'none';
+})
+
 // “Start game” button click event 
 // "Start game" button disappears once clicked and game starts
 
@@ -50,7 +69,7 @@ const startGame = document.getElementById('start-game')
 const score = document.querySelector('#score-count')
 const finalScore = document.querySelector('#final-score')
 const resetButton = document.querySelector('#retry')
-const randomTimeout = Math.floor((Math.random() + 1) * 2000)
+const randomTimeout = Math.floor((Math.random() + 1) * 1500)
 startGame.addEventListener('click', gameStarted)
 
 // Cat image click event that increases the player’s score by 1 per click
@@ -60,11 +79,12 @@ startGame.addEventListener('click', gameStarted)
 
 function gameStarted(e) {
     e.stopPropagation();
+    gameInstructionsButton.style.display = 'none';
     playerNameForm.style.display = 'none';
     startGame.style.display = 'none';
     resetButton.style.display = 'none';
-    score.textContent = 'Score: 0';
-    finalScore.textContent = 'Score: 0';
+    score.textContent = 'score: 0';
+    finalScore.textContent = 'score: 0';
     finalScore.style.display = 'none';
     const firstRandomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
     const firstCatImg = document.createElement('img');
@@ -94,8 +114,8 @@ function gameStarted(e) {
         function clicked(e) {
             e.stopPropagation();
             const scoreCount = parseInt(score.textContent.split(' ')[1]);
-            score.textContent = `Score: ${scoreCount + 1 }`;
-            finalScore.textContent = `Final Score: ${scoreCount + 1 }`;
+            score.textContent = `score: ${scoreCount + 1 }`;
+            finalScore.textContent = `final score: ${scoreCount + 1 }`;
         };
         
         setTimeout(function() {img.style.display = 'none'}, randomTimeout);

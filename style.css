@@ -22,8 +22,8 @@ body {
 }
 
 #cat-tap-title {
-    font-family: Chalkduster, fantasy;
     font-size: 2rem;
+    font-family: Chalkduster, fantasy;
     animation: jitter 200ms linear infinite; color:#fff; display:inline-block
 }
 
@@ -33,7 +33,6 @@ body {
 
 #main-game-board {
     height: 600px;
-    text-align: center;
     background-image: url("Cat\ Tap\ Gameboard.jpg");
     background-size: 800px;
     background-repeat: no-repeat;
@@ -50,12 +49,10 @@ body {
 
 img {
     height: 200px;
-    border-image-outset: 0px;
     border-top-left-radius: 50px 15px;
     border-top-right-radius: 15px 50px;
     border-bottom-right-radius: 50px 15px;
     border-bottom-left-radius: 15px 50px;
-    border: 0.3rem solid rgb(161, 121, 75);
     box-shadow: 0 8px 16px 0 rgb(197, 149, 94);
   }
 
@@ -85,26 +82,23 @@ img {
 
 
 #buttons {
-    padding: 220px;
+    padding: 200px;
+    text-align: center;
 }
 
 #submit-button {
-    background:transparent;
-    padding:0.5rem 0.5rem;
-    margin:0 0.5rem;
-    font-size: 0.9rem;
-
-    border-top-left-radius: 25px 15px;
-    border-top-right-radius: 15px 25px;
-    border-bottom-right-radius: 25px 15px;
-    border-bottom-left-radius: 15px 25px;
-    
     padding: 7px;
+    margin: 0 auto;
     font-weight: 300;
+    font-size: 0.9rem;
     font-family: Chalkduster, fantasy;
     background-color: rgb(247, 221, 225);
     color: rgb(187, 147, 164);
     border: 0.15rem solid rgb(187, 147, 164);
+    border-top-left-radius: 25px 15px;
+    border-top-right-radius: 15px 25px;
+    border-bottom-right-radius: 25px 15px;
+    border-bottom-left-radius: 15px 25px;
 }
 
 #submit-button:hover {
@@ -112,48 +106,90 @@ img {
 }
 
 #start-game {
-    background:transparent;
-    padding:0.5rem 0.5rem;
-    margin:0 0.5rem;
-    font-size:1rem;
-
+    padding: 7px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size:1.25rem;
+    font-weight: 300;
+    font-family: Chalkduster, fantasy;
+    background-color: rgb(209, 165, 115);
+    color: #fff;
+    border: 0.15rem solid rgb(184, 147, 105);
     border-top-left-radius: 15px 25px;
     border-top-right-radius: 25px 15px;
     border-bottom-right-radius: 15px 25px;
     border-bottom-left-radius: 25px 15px;
-    
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-align: center;
-    font-family: Chalkduster, fantasy;
-    border: 0.15rem solid rgb(184, 147, 105);
-    background-color: rgb(209, 165, 115);
-    color: #fff;
 }
 
 #start-game:hover {
     box-shadow: 0 8px 16px 0 rgb(197, 149, 94);
 }
 
-#retry {
-    background:transparent;
-    padding:0.5rem 0.5rem;
+#dropup-info {
+    padding: 7px;
     margin:0 0.5rem;
-    font-size: 0.9rem;
-
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: Chalkduster, fantasy;
+    background-color: rgb(190, 181, 202);
+    border: 0.15rem solid rgb(134, 124, 148);
+    color: rgb(134, 124, 148);
     border-top-left-radius: 15px 25px;
     border-top-right-radius: 25px 15px;
     border-bottom-right-radius: 15px 25px;
     border-bottom-left-radius: 25px 15px;
-    
+  }
+
+  #dropup-info:hover {
+    box-shadow: 0 8px 16px 0 rgb(134, 124, 148);
+  }
+  
+ #dropup-content {
+    padding:0.5rem 0.5rem;
+    margin:0 0.5rem;
+    font-size:0.7rem;
+    text-align: left;
+    font-family: Chalkduster, fantasy;
+    border-top-left-radius: 15px 25px;
+    border-top-right-radius: 25px 15px;
+    border-bottom-right-radius: 15px 25px;
+    border-bottom-left-radius: 25px 15px;
+    background-color: rgb(190, 181, 202);
+    border: 0.15rem solid rgb(134, 124, 148);
+    color: rgb(134, 124, 148);
+  }
+
+  #ok-button {
+    font-size: 0.7rem;
+    padding: 5px;
+    margin-top: 10px;
     margin: 0 auto;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
     text-align: center;
     font-family: Chalkduster, fantasy;
+    border-top-left-radius: 15px 25px;
+    border-top-right-radius: 25px 15px;
+    border-bottom-right-radius: 15px 25px;
+    border-bottom-left-radius: 25px 15px;
+    background-color: rgb(190, 181, 202);
+    border: 0.15rem solid rgb(134, 124, 148);
+    color: rgb(134, 124, 148);
+  }
+
+  #ok-button:hover {
+    box-shadow: 0 8px 16px 0 rgb(134, 124, 148);
+  }
+
+#retry {
+    margin: 0 auto;
+    padding: 7px;
+    text-align: center;
+    font-size:1.25rem;
+    font-weight: 300;
+    font-family: Chalkduster, fantasy;
+    border-top-left-radius: 15px 25px;
+    border-top-right-radius: 25px 15px;
+    border-bottom-right-radius: 15px 25px;
+    border-bottom-left-radius: 25px 15px;
     border: 0.15rem solid rgb(143, 167, 143);
     background-color: rgb(183, 214, 183);
     color: rgb(143, 167, 143);
@@ -175,7 +211,7 @@ img {
 
 #user-info {
     margin: 0 auto;
-    padding: 50px;
+    padding: 60px;
     font-family: Chalkduster, fantasy;
     font-size: 0.9rem;
     font-weight: 300;
@@ -196,9 +232,9 @@ img {
     color: #fff
   }
 
-#images
+/* #images
 {
     display:table;
     margin:0 auto;
     color: white;
-}
+} */
