@@ -1,5 +1,6 @@
 html, .cursor {
     cursor: url('Cat\ Tap\ Cursor.png'), auto;
+    user-select: none;
 }
 
 body {
