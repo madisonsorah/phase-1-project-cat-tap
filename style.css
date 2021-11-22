@@ -26,11 +26,11 @@ body {
 #cat-tap-title {
     font-size: 2rem;
     font-family: Chalkduster, fantasy;
-    animation: jitter 200ms linear infinite; color:#fff; display:inline-block
+    animation: jitter 200ms linear infinite; color:#fff; display:inline-block;
 }
 
 @keyframes jitter { 
-    50% {transform:skewY(0.7deg) skewX(-0.7deg) scale(1.006);} 
+    50% {transform:skewY(0.7deg) skewX(-0.7deg) scale(1.006);};
 }
 
 #main-game-board {
@@ -61,8 +61,8 @@ img {
 
 #username-input {
     padding: 20px;
-    font-size: 0.9rem;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 #username {
@@ -128,7 +128,7 @@ img {
     box-shadow: 0 8px 16px 0 rgb(197, 149, 94);
 }
 
-#dropup-info {
+#how-to-play {
     padding: 7px;
     margin: 0 0.5rem;
     font-size: 1.25rem;
@@ -143,15 +143,15 @@ img {
     border-bottom-left-radius: 25px 15px;
   }
 
-  #dropup-info:hover {
+  #how-to-play:hover {
     box-shadow: 0 8px 16px 0 rgb(134, 124, 148);
   }
   
- #dropup-content {
+ #game-instructions {
     padding:0.5rem 0.5rem;
     margin: 0 0.5rem;
-    font-size: 0.9rem;
     text-align: left;
+    font-size: 0.9rem;
     font-family: Chalkduster, fantasy;
     border-top-left-radius: 15px 25px;
     border-top-right-radius: 25px 15px;
@@ -163,11 +163,11 @@ img {
   }
 
   #ok-button {
-    font-size: 0.9rem;
     padding: 5px;
     margin-top: 10px;
     margin: 0 auto;
     text-align: center;
+    font-size: 0.9rem;
     font-family: Chalkduster, fantasy;
     border-top-left-radius: 15px 25px;
     border-top-right-radius: 25px 15px;
@@ -204,20 +204,20 @@ img {
 
 #final-score {
     padding: 20px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-shadow: 0 8px 16px 0 rgb(161, 121, 75);
     text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
     font-family: Chalkduster, fantasy;
+    text-shadow: 0 8px 16px 0 rgb(161, 121, 75);
     color: #fff;
 }
 
 #user-info {
     margin: 0 auto;
     padding: 60px;
-    font-family: Chalkduster, fantasy;
     font-size: 0.9rem;
     font-weight: 300;
+    font-family: Chalkduster, fantasy;
     background-color: rgb(209, 165, 115);
     border-bottom: 0.15rem solid rgb(184, 147, 105);
     border-left: 0.15rem solid rgb(184, 147, 105);
@@ -235,9 +235,9 @@ img {
     color: #fff
   }
 
-#images
+/* #images
 {
     display:table;
     margin: 0 auto;
     color: white;
-}
+} */

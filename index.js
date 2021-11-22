@@ -21,7 +21,7 @@ function fetchData() {
     })
 }
 
-// “Player Name” form that enables player to submit a username
+// Player Name form that enables player to submit a username
 
 const playerNameForm = document.querySelector('#username-input')
 const playerName = document.querySelector('#username')
@@ -32,7 +32,7 @@ playerNameForm.addEventListener('submit', (e) => {
     playerNameForm.reset();
 })
 
-// “Player Name” form that submits a username of the player’s choice to the bottom of the page
+// Player Name form that submits a username of the player’s choice to the bottom of the page
 
 function playerNameInput(userName) {
     playerName.innerHTML = '';
@@ -45,39 +45,41 @@ function playerNameInput(userName) {
     okButton.style.display = 'none';
 }
 
-// "How to play" button click event
-// "How to play" button disappears once game starts
-// "How to play" instructions dissapear once game starts
+// How To Play button click event that opens game instructions
+// Ok button that closes game instructions
+// How To Play button disappears once game starts
+// Ok button disappears once game starts
+// How To Play instructions disappear once game starts
 
-const gameInstructionsButton = document.querySelector("#dropup-info")
-const gameInstructions = document.querySelector("#dropup-content")
+const gameInstructionsButton = document.querySelector('#how-to-play')
+const gameInstructions = document.querySelector('#game-instructions')
 
 gameInstructionsButton.addEventListener('click', function () {
     gameInstructions.style.display = 'block';
     okButton.style.display = 'block';
 })
 
-const okButton = document.querySelector("#ok-button")
+const okButton = document.querySelector('#ok-button')
 
 okButton.addEventListener('click', function() {
     gameInstructions.style.display = 'none';
     okButton.style.display = 'none';
 })
 
-// “Start game” button click event 
-// "Start game" button disappears once clicked and game starts
+// Start game button click event 
+// Start game button disappears once clicked and game starts
+// Cat image click event that increases the player’s score by 1 per click
+// Update number of clicks in the #score-count element
+// Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
+// Resize cat images to fit on the game board
 
 const startGame = document.getElementById('start-game')
 const score = document.querySelector('#score-count')
 const finalScore = document.querySelector('#final-score')
 const resetButton = document.querySelector('#retry')
-const randomTimeout = Math.floor((Math.random() + 1) * 1500)
-startGame.addEventListener('click', gameStarted)
+const randomTimeout = Math.floor((Math.random() + 1) * 2000)
 
-// Cat image click event that increases the player’s score by 1 per click
-// Update number of clicks in the "#score-count" element
-// Set timeout on cat image; when cat image disappears, another cat image reappears somewhere different on the game board
-// Resize cat images to fit on the game board
+startGame.addEventListener('click', gameStarted)
 
 function gameStarted(e) {
     e.stopPropagation();
@@ -123,19 +125,16 @@ function gameStarted(e) {
         };
         
         setTimeout(function() {img.style.display = 'none'}, randomTimeout);
-    }, 4000);
+    }, randomTimeout);
 
     const backgrounds = document.getElementById('main-game-board')
+
     backgrounds.addEventListener('click', outsideClick)
 
     function outsideClick() {
-        // Clear images
         clearInterval(interval);
-        // Display player score at center of screen
         finalScore.style.display= 'block';
-        // Display retry button
         resetButton.style.display= 'block';
-        // Restart game
         resetButton.addEventListener('click', gameRestarted);
     };
 }
@@ -151,15 +150,15 @@ function gameRestarted(e) {
     gameStarted(e);
 }
 
-//button for random image
-// let randomImages = document.getElementById("images")
+// Button for random cat image
+// let randomImages = document.getElementById('images')
 // randomImages.addEventListener('click', randomCats)
 
-function randomCats(e) {
-    const randomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
-    const img = document.createElement('img');
-    img.src = catImagesUrls[randomImageNumber]
-    randomImages.append(img)
-    console.log(randomCats)
-    setTimeout(function() {img.style.display = 'none'}, randomTimeout);
-}
+// function randomCats(e) {
+//     const randomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
+//     const img = document.createElement('img');
+//     img.src = catImagesUrls[randomImageNumber]
+//     randomImages.append(img)
+//     console.log(randomCats)
+//     setTimeout(function() {img.style.display = 'none'}, randomTimeout);
+// }
