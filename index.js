@@ -149,16 +149,3 @@ function gameRestarted(e) {
     finalScore.style.display = 'none';
     gameStarted(e);
 }
-
-// Button for random cat image
-// let randomImages = document.getElementById('images')
-// randomImages.addEventListener('click', randomCats)
-
-// function randomCats(e) {
-//     const randomImageNumber = Math.floor(Math.random() * catImagesUrls.length);
-//     const img = document.createElement('img');
-//     img.src = catImagesUrls[randomImageNumber]
-//     randomImages.append(img)
-//     console.log(randomCats)
-//     setTimeout(function() {img.style.display = 'none'}, randomTimeout);
-// }
